@@ -1,4 +1,5 @@
 -- RELATÓRIO DE PARTICIPANTES E FUNCIONÁRIOS DO EVENTO
+-- OK 1
 (SELECT 
 	P.CPF,
 	P.NOME, 
@@ -18,6 +19,7 @@ WHERE
 	T.EVENTO = 2)
 
 -- FUNCIONÁRIOS DE UMA DETERMINADA FUNÇÃO DO EVENTO
+-- OK 2
 SELECT 
     P.CPF,
     P.NOME,
@@ -30,6 +32,7 @@ WHERE
     T.CARGO = 'Guilherme Sales'
 
 -- LOCAIS DISPONÍVEIS PARA UMA DETERMINADA DATA E HORÁRIO
+-- OK 3
 SELECT 
     *
 FROM LOCAL L
@@ -54,6 +57,7 @@ WHERE
 	E.DATA <= '2010-03-20' -- DATA_FIM
 
 -- QUANTIDADE DE EVENTOS POR CIDADE EM UM PERÍODO DE TEMPO
+-- OK 4
 SELECT 
 	L.CIDADE,
 	COUNT(E.ID) AS QTD
@@ -65,7 +69,8 @@ WHERE
 GROUP BY
 	L.CIDADE
 	
--- Insumos / brinquedos / presentes mais consumidos em eventos
+-- Insumos / brinquedos / presentes mais consumidos em eventos (note que consiste de um select para cada tipo)
+-- OK 5
 SELECT *
 FROM
  (SELECT
@@ -139,5 +144,38 @@ SELECT
 FROM
  VENDA_BRINQUEDO
 WHERE
- BRINQUEDO LIKE 'Yuri Barros'; --VARIÁVEL AQUI	
+ BRINQUEDO LIKE 'Yuri Barros'; --VARIÁVEL AQUI
+ 
+ -- frequência de quais universidades / cursos as turmas contratam mais
+ -- OK 6
+SELECT
+ 	UNIVERSIDADE,
+	COUNT(DISTINCT(FORMATURA)) AS FREQ
+FROM
+	TURMA
+GROUP BY
+	UNIVERSIDADE
+ORDER BY FREQ DESC;
+	
+	
+SELECT
+ 	CURSO,
+	COUNT(DISTINCT(FORMATURA)) AS FREQ
+FROM
+	TURMA
+GROUP BY
+	CURSO
+ORDER BY FREQ DESC;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 	
