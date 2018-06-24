@@ -34,3 +34,6 @@ where:
 * DBuser = The username of your database
 * DBpassword = The password of your database
 * DBname = Your database name
+
+The application is running on Terminal, so bigger the Terminal screen, better!
+Enjoy!
