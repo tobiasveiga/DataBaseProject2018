@@ -2,6 +2,18 @@
 
 A prototype of a database made in C, the Database script were made in PostGreSQL
 
+## Features
+* CRUD operations
+* Show 'Relatorios'
+⋅⋅* RELATÓRIO DE PARTICIPANTES E FUNCIONÁRIOS DO EVENTO
+..* FUNCIONÁRIOS DE UMA DETERMINADA FUNÇÃO DO EVENTO
+..* LOCAIS DISPONÍVEIS PARA UMA DETERMINADA DATA E HORÁRIO
+..* DATAS E HORÁRIOS INDISPONÍVEIS PARA UM DETERMINADO LOCAL
+..* QUANTIDADE DE EVENTOS POR CIDADE EM UM PERÍODO DE TEMPO
+..* Insumos / brinquedos / presentes mais consumidos em eventos (note que consiste de um select para cada tipo)
+..* Empresas fornecedoras de um determinado insumo, presente ou brinquedo
+..* Frequência de quais universidades / cursos as turmas contratam mais
+
 # How-to
 
 To run the application first you have to run the scripts for creating the tables and inserting new tuples to it.
